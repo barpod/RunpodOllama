@@ -29,7 +29,7 @@ def handler(job: HandlerJob):
     input["input"]["model"] = model
 
     response = requests.post(
-        url=f"{base_url}/{input['method_name']}",
+        url=f"{base_url}/api/{input['method_name']}",
         headers={"Content-Type": "application/json"},
         json=input["input"],
     )
